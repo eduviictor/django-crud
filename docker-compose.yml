@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_python
+    environment:
+      - MONGO_INITDB_DATABASE=$MONGO_DB
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_USER
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASS
+    ports:
+      - 27017:27017
